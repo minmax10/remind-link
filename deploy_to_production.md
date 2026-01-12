@@ -41,7 +41,7 @@
    INSTAGRAM_USERNAME=
    INSTAGRAM_PASSWORD=
    ```
-   
+
    ⚠️ **중요**: `PYTHONIOENCODING`, `LC_ALL`, `LANG` 환경 변수를 추가해야 한글이 깨지지 않습니다!
 
    **SECRET_KEY 생성 방법**:
