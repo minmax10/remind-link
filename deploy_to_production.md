@@ -203,9 +203,14 @@ SECRET_KEY=your-secret-key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 ALLOWED_ORIGINS=https://remind-link.vercel.app,http://localhost:3000
+PYTHONIOENCODING=utf-8
+LC_ALL=C.UTF-8
+LANG=C.UTF-8
 INSTAGRAM_USERNAME=
 INSTAGRAM_PASSWORD=
 ```
+
+⚠️ **한글 깨짐 방지**: `PYTHONIOENCODING`, `LC_ALL`, `LANG` 환경 변수 필수!
 
 ### Vercel (프론트엔드)
 
