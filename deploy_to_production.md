@@ -29,26 +29,23 @@
 
 9. **환경 변수 설정** (Variables 탭):
 
+   Railway Variables 탭에서 다음 변수들을 추가하세요:
+   
    ```
-   DATABASE_URL=<PostgreSQL URL (위에서 복사)>
-   SECRET_KEY=<랜덤 문자열 생성>
+   DATABASE_URL=<PostgreSQL URL (위 8번에서 복사)>
+   SECRET_KEY=4I96Crx9dSTMUO8ZcimdLCQ6eO4k1xY8uxO9QlN51TA
    ALGORITHM=HS256
    ACCESS_TOKEN_EXPIRE_MINUTES=30
    ALLOWED_ORIGINS=http://localhost:3000
    PYTHONIOENCODING=utf-8
    LC_ALL=C.UTF-8
    LANG=C.UTF-8
-   INSTAGRAM_USERNAME=
-   INSTAGRAM_PASSWORD=
    ```
-
-   ⚠️ **중요**: `PYTHONIOENCODING`, `LC_ALL`, `LANG` 환경 변수를 추가해야 한글이 깨지지 않습니다!
-
-   **SECRET_KEY 생성 방법**:
-
-   ```powershell
-   python -c "import secrets; print(secrets.token_urlsafe(32))"
-   ```
+   
+   ⚠️ **참고**:
+   - `DATABASE_URL`은 PostgreSQL 추가 후 Connect 탭에서 복사
+   - `INSTAGRAM_USERNAME`과 `INSTAGRAM_PASSWORD`는 나중에 사용자 화면에서 입력
+   - 환경 변수는 `환경변수_일괄복사.txt` 파일에서 복사 가능
 
 10. **배포 완료 후 URL 확인** (예: `https://remind-link-api.railway.app`)
     - 이 URL을 복사해두세요!
@@ -64,14 +61,12 @@
 5. **프로젝트 설정 화면에서 "Configure Project" 클릭**
 
 6. **Root Directory 설정** (⚠️ 중요!):
-   
+
    - **"Root Directory"** 입력란 찾기
    - 입력란 옆에 **"Edit" 버튼**이 있을 수 있음
    - 또는 바로 입력 가능
    - **`frontend` 입력**
    - **"Deploy" 버튼 클릭**
-
-7. **Environment Variables** 섹션 (배포 후에도 설정 가능):
 
    ```
    NEXT_PUBLIC_API_URL=https://remind-link-api.railway.app
@@ -79,9 +74,27 @@
 
    (위에서 복사한 Railway 백엔드 URL 사용)
 
-7. **Deploy** 클릭
-8. **배포 완료 후 URL 확인** (예: `https://remind-link.vercel.app`)
+8. **Deploy** 클릭
+9. **배포 완료 후 URL 확인** (예: `https://remind-link.vercel.app`)
    - 이 URL을 복사해두세요!
+
+---
+
+## 📝 수동 배포 방법
+
+### Railway 수동 배포
+
+1. Railway 대시보드에서 프로젝트 선택
+2. **Deployments** 탭 클릭
+3. **"Redeploy" 버튼** 클릭 (최신 커밋으로 재배포)
+4. 또는 **"Manual Deploy" 버튼** 클릭 (특정 커밋 선택)
+
+### Vercel 수동 배포
+
+1. Vercel 대시보드에서 프로젝트 선택
+2. **Deployments** 탭 클릭
+3. **"Redeploy" 버튼** 클릭 (최신 커밋으로 재배포)
+4. 또는 특정 배포 옆 **"..." 메뉴** → **"Redeploy"**
 
 ---
 

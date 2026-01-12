@@ -1,0 +1,13 @@
+# Railway 환경 변수 (일괄 복사용)
+
+DATABASE_URL=postgresql://postgres:password@hostname:5432/railway
+SECRET_KEY=4I96Crx9dSTMUO8ZcimdLCQ6eO4k1xY8uxO9QlN51TA
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+ALLOWED_ORIGINS=http://localhost:3000
+PYTHONIOENCODING=utf-8
+LC_ALL=C.UTF-8
+LANG=C.UTF-8
+
+# 참고: DATABASE_URL은 Railway에서 PostgreSQL 추가 후 Connect 탭에서 복사
+# INSTAGRAM_USERNAME과 INSTAGRAM_PASSWORD는 나중에 사용자 화면에서 입력
