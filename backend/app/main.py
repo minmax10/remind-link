@@ -1,8 +1,18 @@
 """
 FastAPI 애플리케이션 진입점
 """
+import sys
+import os
+
+# UTF-8 인코딩 강제 설정
+if sys.platform == "win32":
+    os.environ["PYTHONIOENCODING"] = "utf-8"
+    os.environ["LC_ALL"] = "C.UTF-8"
+    os.environ["LANG"] = "C.UTF-8"
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from app.config import settings
 from app.database import init_db
 from app.api import auth, contents, integrations, categories
@@ -15,7 +25,8 @@ app = FastAPI(
     swagger_ui_parameters={
         "persistAuthorization": True,
         "displayRequestDuration": True,
-    }
+    },
+    default_response_class=JSONResponse
 )
 
 # CORS 설정
