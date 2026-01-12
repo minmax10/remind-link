@@ -16,16 +16,19 @@
 5. **"Deploy" 버튼 클릭**
 6. **배포가 시작되면 → Settings 탭 클릭**
 7. **Root Directory 설정**:
+
    - Settings 페이지에서 **"Root Directory"** 항목 찾기
    - 입력란에 `backend` 입력
    - **"Update" 또는 "Save" 버튼 클릭**
    - ⚠️ 중요: Root Directory를 `backend`로 설정하지 않으면 배포가 실패합니다!
 
-6. **PostgreSQL 데이터베이스 추가**:
+8. **PostgreSQL 데이터베이스 추가**:
+
    - **New** → **Database** → **Add PostgreSQL**
    - 생성 완료 후 **Connect** 탭에서 `DATABASE_URL` 복사
 
-7. **환경 변수 설정** (Variables 탭):
+9. **환경 변수 설정** (Variables 탭):
+
    ```
    DATABASE_URL=<PostgreSQL URL (위에서 복사)>
    SECRET_KEY=<랜덤 문자열 생성>
@@ -37,12 +40,13 @@
    ```
 
    **SECRET_KEY 생성 방법**:
+
    ```powershell
    python -c "import secrets; print(secrets.token_urlsafe(32))"
    ```
 
-8. **배포 완료 후 URL 확인** (예: `https://remind-link-api.railway.app`)
-   - 이 URL을 복사해두세요!
+10. **배포 완료 후 URL 확인** (예: `https://remind-link-api.railway.app`)
+    - 이 URL을 복사해두세요!
 
 ---
 
@@ -53,6 +57,7 @@
 3. **Add New Project** 클릭
 4. **레포지토리 선택**: `minmax10/remind-link`
 5. **프로젝트 설정 화면**:
+
    - **"Configure Project"** 섹션에서
    - **"Root Directory"** 찾기 (기본값은 `.` 또는 비어있음)
    - **Root Directory에 `frontend` 입력** ⚠️ 중요!
@@ -61,9 +66,11 @@
    - **Output Directory**: `.next` (자동)
 
 6. **Environment Variables** 섹션:
+
    ```
    NEXT_PUBLIC_API_URL=https://remind-link-api.railway.app
    ```
+
    (위에서 복사한 Railway 백엔드 URL 사용)
 
 7. **Deploy** 클릭
@@ -98,6 +105,7 @@ python init_db.py
 ```
 
 또는 Railway **Settings** → **Service** → **Start Command** 수정:
+
 ```
 python init_db.py && uvicorn app.main:app --host 0.0.0.0 --port $PORT
 ```
@@ -107,10 +115,12 @@ python init_db.py && uvicorn app.main:app --host 0.0.0.0 --port $PORT
 ## ✅ 배포 완료 확인
 
 ### 백엔드 확인
+
 - API 문서: `https://remind-link-api.railway.app/docs`
 - Health check: `https://remind-link-api.railway.app/api/health`
 
 ### 프론트엔드 확인
+
 - 메인 페이지: `https://remind-link.vercel.app`
 
 ---
@@ -155,19 +165,23 @@ python init_db.py && uvicorn app.main:app --host 0.0.0.0 --port $PORT
 ## 🔧 문제 해결
 
 ### CORS 오류
+
 - Railway `ALLOWED_ORIGINS`에 프론트엔드 URL 추가
 - Railway 재배포
 
 ### 데이터베이스 연결 오류
+
 - Railway PostgreSQL이 생성되었는지 확인
 - `DATABASE_URL` 환경 변수 확인
 
 ### 빌드 실패
+
 - Vercel 빌드 로그 확인
 - Root Directory가 `frontend`인지 확인
 - `NEXT_PUBLIC_API_URL` 환경 변수 확인
 
 ### 인스타그램 로그인 실패
+
 - 사용자명과 비밀번호 확인
 - 2단계 인증 활성화 시 앱 비밀번호 사용
 - 인스타그램 계정 상태 확인
@@ -177,6 +191,7 @@ python init_db.py && uvicorn app.main:app --host 0.0.0.0 --port $PORT
 ## 📝 환경 변수 정리
 
 ### Railway (백엔드)
+
 ```env
 DATABASE_URL=postgresql://...
 SECRET_KEY=your-secret-key
@@ -188,6 +203,7 @@ INSTAGRAM_PASSWORD=
 ```
 
 ### Vercel (프론트엔드)
+
 ```env
 NEXT_PUBLIC_API_URL=https://remind-link-api.railway.app
 ```
@@ -197,6 +213,7 @@ NEXT_PUBLIC_API_URL=https://remind-link-api.railway.app
 ## ✅ 완료!
 
 이제 서비스 사용 가능:
+
 - **프론트엔드**: https://remind-link.vercel.app
 - **백엔드 API**: https://remind-link-api.railway.app/docs
 - **인스타그램 연동**: 프론트엔드에서 연동 버튼 클릭

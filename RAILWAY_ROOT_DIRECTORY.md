@@ -30,13 +30,15 @@ remind-link/
 
 ### 2단계: Settings 탭에서 Root Directory 설정
 
-배포가 시작되면 프로젝트 대시보드가 표시됩니다.
+**중요: 레포지토리를 선택하면 바로 배포가 시작될 수 있습니다. 배포가 시작된 후 아래 단계를 따르세요.**
 
-1. 상단 메뉴에서 **"Settings" 탭 클릭**
-2. Settings 페이지에서 아래로 스크롤
-3. **"Root Directory"** 항목 찾기
-4. 입력란에 `backend` 입력
-5. **"Update" 또는 "Save" 버튼 클릭**
+1. **프로젝트 대시보드에서 서비스(Service) 클릭** (보통 프로젝트 이름과 동일한 박스)
+2. **"Settings" 탭 클릭** (상단 메뉴 또는 왼쪽 사이드바)
+3. **Settings 페이지에서 아래로 스크롤**
+4. **"Source" 섹션 찾기** ← 중요!
+5. **"Source" 섹션 안에 "Root Directory" 항목이 있습니다**
+6. **"Root Directory" 옆의 입력란에 `backend` 입력**
+7. **"Save" 또는 "Update" 버튼 클릭**
 
 ### 3단계: 재배포
 
