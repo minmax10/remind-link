@@ -59,18 +59,19 @@
 
 1. **접속**: https://vercel.com
 2. **로그인**: GitHub 계정으로 로그인
-3. **Add New Project** 클릭
-4. **레포지토리 선택**: `minmax10/remind-link`
-5. **프로젝트 설정 화면**:
+3. **"Add New..." 버튼 클릭** (또는 "Add New Project")
+4. **레포지토리 검색 및 선택**: `minmax10/remind-link` 검색 후 선택
+5. **프로젝트 설정 화면에서 "Configure Project" 클릭**
 
-   - **"Configure Project"** 섹션에서
-   - **"Root Directory"** 찾기 (기본값은 `.` 또는 비어있음)
-   - **Root Directory에 `frontend` 입력** ⚠️ 중요!
-   - **Framework Preset**: Next.js (자동 감지됨)
-   - **Build Command**: `npm run build` (자동)
-   - **Output Directory**: `.next` (자동)
+6. **Root Directory 설정** (⚠️ 중요!):
+   
+   - **"Root Directory"** 입력란 찾기
+   - 입력란 옆에 **"Edit" 버튼**이 있을 수 있음
+   - 또는 바로 입력 가능
+   - **`frontend` 입력**
+   - **"Deploy" 버튼 클릭**
 
-6. **Environment Variables** 섹션:
+7. **Environment Variables** 섹션 (배포 후에도 설정 가능):
 
    ```
    NEXT_PUBLIC_API_URL=https://remind-link-api.railway.app
