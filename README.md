@@ -35,30 +35,12 @@ npm run dev
 
 ## 📦 배포
 
-자세한 배포 가이드는 [DEPLOYMENT.md](./DEPLOYMENT.md)를 참고하세요.
+자세한 배포 가이드는 [deploy_to_production.md](./deploy_to_production.md)를 참고하세요.
 
-### 빠른 배포
-
-1. **GitHub에 푸시**
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/your-username/remind-link.git
-git push -u origin main
-```
-
-2. **Vercel에 프론트엔드 배포**
-   - [Vercel](https://vercel.com) 접속
-   - GitHub 레포지토리 연결
-   - Root Directory: `frontend`
-   - 환경 변수: `NEXT_PUBLIC_API_URL=https://your-backend-url.com`
-
-3. **Railway에 백엔드 배포**
-   - [Railway](https://railway.app) 접속
-   - New Project → Deploy from GitHub
-   - Root Directory: `backend`
-   - 환경 변수 설정 (DEPLOYMENT.md 참고)
+- [Railway 백엔드 배포](https://railway.app)
+- [Vercel 프론트엔드 배포](https://vercel.com)
+- [배포 가이드](./deploy_to_production.md)
+- [배포 체크리스트](./DEPLOYMENT_CHECKLIST.md)
 
 ## 🛠️ 기술 스택
 
@@ -100,7 +82,8 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 - [프로젝트 기획](./docs/01_PROJECT_PLANNING.md)
 - [아키텍처](./docs/02_ARCHITECTURE.md)
 - [API 명세](./docs/03_API_SPEC.md)
-- [배포 가이드](./DEPLOYMENT.md)
+- [배포 가이드](./deploy_to_production.md)
+- [인스타그램 연동 가이드](./INSTAGRAM_SETUP.md)
 
 ## 📄 라이선스
 
