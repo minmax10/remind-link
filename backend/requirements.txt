@@ -6,8 +6,8 @@ python-multipart>=0.0.6
 # 데이터베이스
 sqlalchemy>=2.0.0
 alembic>=1.12.0
-# psycopg2-binary>=2.9.0  # PostgreSQL (선택사항, 필요시 주석 해제)
-# SQLite는 Python 기본 포함
+psycopg2-binary>=2.9.0  # PostgreSQL (프로덕션용)
+# SQLite는 Python 기본 포함 (개발용)
 
 # 인증 및 보안
 python-jose[cryptography]>=3.3.0
