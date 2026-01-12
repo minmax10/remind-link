@@ -35,9 +35,14 @@
    ALGORITHM=HS256
    ACCESS_TOKEN_EXPIRE_MINUTES=30
    ALLOWED_ORIGINS=http://localhost:3000
+   PYTHONIOENCODING=utf-8
+   LC_ALL=C.UTF-8
+   LANG=C.UTF-8
    INSTAGRAM_USERNAME=
    INSTAGRAM_PASSWORD=
    ```
+   
+   ⚠️ **중요**: `PYTHONIOENCODING`, `LC_ALL`, `LANG` 환경 변수를 추가해야 한글이 깨지지 않습니다!
 
    **SECRET_KEY 생성 방법**:
 
