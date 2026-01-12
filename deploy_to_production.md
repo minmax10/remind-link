@@ -9,13 +9,17 @@
 
 ### 1단계: Railway 백엔드 배포
 
-1. **접속**: https://railway.app
-2. **로그인**: GitHub 계정으로 로그인
-3. **New Project** → **Deploy from GitHub repo**
-4. **레포지토리 선택**: `minmax10/remind-link`
-5. **설정**:
-   - **Root Directory**: `backend` ⚠️ 중요!
-   - **Start Command**: 자동 감지됨
+1. **접속**: https://railway.app/new
+2. **로그인**: "Login" 버튼 클릭 → GitHub 계정으로 로그인
+3. **"GitHub Repository" 선택** (드롭다운 메뉴에서)
+4. **레포지토리 검색 및 선택**: `minmax10/remind-link` 검색 후 선택
+5. **"Deploy" 버튼 클릭**
+6. **배포가 시작되면 → Settings 탭 클릭**
+7. **Root Directory 설정**:
+   - Settings 페이지에서 **"Root Directory"** 항목 찾기
+   - 입력란에 `backend` 입력
+   - **"Update" 또는 "Save" 버튼 클릭**
+   - ⚠️ 중요: Root Directory를 `backend`로 설정하지 않으면 배포가 실패합니다!
 
 6. **PostgreSQL 데이터베이스 추가**:
    - **New** → **Database** → **Add PostgreSQL**
@@ -48,9 +52,11 @@
 2. **로그인**: GitHub 계정으로 로그인
 3. **Add New Project** 클릭
 4. **레포지토리 선택**: `minmax10/remind-link`
-5. **Configure Project**:
-   - **Framework Preset**: Next.js (자동)
-   - **Root Directory**: `frontend` ⚠️ 중요! (변경 필요)
+5. **프로젝트 설정 화면**:
+   - **"Configure Project"** 섹션에서
+   - **"Root Directory"** 찾기 (기본값은 `.` 또는 비어있음)
+   - **Root Directory에 `frontend` 입력** ⚠️ 중요!
+   - **Framework Preset**: Next.js (자동 감지됨)
    - **Build Command**: `npm run build` (자동)
    - **Output Directory**: `.next` (자동)
 
